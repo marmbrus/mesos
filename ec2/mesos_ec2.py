@@ -27,7 +27,7 @@ def parse_args():
       help="Number of slaves to launch (default: 1)")
   parser.add_option("-k", "--key-pair",
       help="Key pair to use on instances")
-  parser.add_option("-i", "--identity-file", 
+  parser.add_option("-i", "--identity-file", default=("%s/.ssh/id_rsa" % os.environ["HOME"]),
       help="SSH private key file to use for logging into instances")
   parser.add_option("-t", "--instance-type", default="m1.large",
       help="Type of instance to launch (default: m1.large). " +
